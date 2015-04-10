@@ -2,9 +2,9 @@ using ArgParse
 s = ArgParseSettings()
 @add_arg_table s begin
     "bed_file"
-        help = "a file to read experiment ids from line by line"
+        help = "a file to read experiment ids from line by line (use '-' for STDIN)"
         arg_type = ASCIIString
-        default = "-"
+        required = true
     "--bin_width"
         help = "how many base pairs should each bin cover"
         arg_type = Int64
